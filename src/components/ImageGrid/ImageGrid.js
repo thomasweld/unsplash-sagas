@@ -16,9 +16,9 @@ class ImageGrid extends Component {
         return (
             <div className="content">
                 <section className="grid">
-                    {images.map(image => (
+                    {images.map((image, index) => (
                         <div
-                            key={image.id}
+                            key={`${image.id}-${index}`}
                             className={`item item-${Math.ceil(
                                 image.height / image.width,
                             )}`}
